@@ -1,12 +1,22 @@
-Wild bootstrap MMD
+Wild bootstrap Kernel Tests
 ====
-Maximum mean discrepancy (MMD) kernel two-sample tests for random processes. The wild bootstrap MMD test verifies the hypothesis that X has the same distribution as Y. For the details see 'A Wild Bootstrap for Degenerate Kernel Tests' http://arxiv.org/abs/1408.5404 . See example.m for the sample code.
+Two kernel test are implemented in this package
+
+* **MMD** Maximum mean discrepancy kernel two-sample test. 
+* **HSIC** Hilbert Schmidt Independence Criterion  - independence test.
+
+The wild bootstrap MMD test verifies the hypothesis that X has the same distribution as Y. The wild bootstrap HSIC test verifies the hypothesis that X and Y are independent. For the details see 'A Wild Bootstrap for Degenerate Kernel Tests' http://arxiv.org/abs/1408.5404. See example.m for the sample code.
 
 Syntax
 ---
+Both tests share the same syntax
 ```
-RESULTS = MMD(X,Y)
-RESULTS = MMD(X,Y,Name,Value)
+RESULTS = wildMMD(X,Y)
+RESULTS = wildMMD(X,Y,Name,Value)
+```
+```
+RESULTS = wildHSIC(X,Y)
+RESULTS = wildHSIC(X,Y,Name,Value)
 ```
 **Arguments**
 
