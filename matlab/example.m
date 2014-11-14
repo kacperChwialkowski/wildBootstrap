@@ -24,3 +24,10 @@ wildMMD(X,Y)
 wildMMD(X,2*Y,'TestType',2,'Alpha',0.01,'NumBootstrap',500)
 
 
+%mulitdimensional case
+processes = simulate(model,n,'numPaths',8);
+X = processes(:,1:4);
+Y = processes(:,5:8);
+
+wildHSIC(X,Y+X)
+
