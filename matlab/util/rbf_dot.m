@@ -4,8 +4,8 @@
 %Pattern input format : [pattern1 ; pattern2 ; ...]
 %Output : p11*p21 p11*p22 ... ; p12*p21 ...
 
-function kernel=rbf_dot(patterns1,patterns2)
-    sigma = median_heur([patterns1;patterns2]);
+function kernel=rbf_dot(patterns)
+    sigma = median_heur([patterns]);
     if isnan(sigma)
         sigma = 1;
         warning('median heuristic failed')
