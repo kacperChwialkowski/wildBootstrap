@@ -1,3 +1,4 @@
+addpath('util')
 model = arima('Constant',0,'AR',{0.5},'Variance',1);
 n = 1000;
 processes = simulate(model,n,'numPaths',2);
