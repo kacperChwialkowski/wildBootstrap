@@ -25,7 +25,7 @@ function results = wildMMD(X,Y,varargin)
 addpath('util')
 
 okargs =   {'TestType','Alpha', 'Kernel' ,'WildBootstrap','NumBootstrap'};
-defaults = {true,0.05, rbf_dot([X;Y]),@bootstrap_series, 300};
+defaults = {true,0.05, rbf_dot([X;Y]),@bootstrap_series_2, 300};
     [test_type,alpha, kernel,wild_bootstrap, numBootstrap] = ...
         internal.stats.parseArgs(okargs, defaults, varargin{:});  
 

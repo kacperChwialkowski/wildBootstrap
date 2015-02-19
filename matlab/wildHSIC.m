@@ -25,7 +25,7 @@ function [results] = wildHSIC(X,Y,varargin)
 addpath('util')
 
 okargs =   {'TestType','Alpha', 'Kernel_X','Kernel_Y' ,'WildBootstrap','NumBootstrap'};
-defaults = {true,0.05, rbf_dot(X),rbf_dot(Y),@bootstrap_series, 300};
+defaults = {true,0.05, rbf_dot(X),rbf_dot(Y),@bootstrap_series_2, 300};
     [test_type,alpha, kernel_X,kernel_Y,wild_bootstrap, numBootstrap] = ...
         internal.stats.parseArgs(okargs, defaults, varargin{:});  
 
