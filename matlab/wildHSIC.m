@@ -37,7 +37,7 @@ K = kernel_X(X,X);
 L = kernel_Y(Y,Y);
 H = eye(m)-1/m*ones(m,m);
 Kc = H*K*H;
-Lc = H*L*H;
+Lc = L;
 statMatrix = Kc.*Lc;
 
 results = bootstrap_null(m,numBootstrap,statMatrix,alpha,wild_bootstrap,test_type);
